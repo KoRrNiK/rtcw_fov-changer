@@ -18,7 +18,7 @@ namespace Return_to_Castle_Wolfenstein_Fov_changer
     {
 
         public Mem m = new Mem();
-        string fovBytes = "30086C90,08";
+        string fovBytes = "cgamex86.dll+9DC928";
         string nameGame = "WolfSP";
        
         public Form1()
@@ -184,12 +184,13 @@ namespace Return_to_Castle_Wolfenstein_Fov_changer
             }
             else
             {
+                string na = "N/A";
                 processOpenLabel.ForeColor = Color.DarkRed;
-                processOpenLabel.Text = "N/A";
+                processOpenLabel.Text = na;
                 processOpenLabel.Font = new Font(processOpenLabel.Font, FontStyle.Regular);
 
                 processID.ForeColor = Color.DarkRed;
-                processID.Text = "N/A";
+                processID.Text = na;
                 processID.Font = new Font(processID.Font, FontStyle.Regular);
                 return; 
             }
@@ -205,6 +206,7 @@ namespace Return_to_Castle_Wolfenstein_Fov_changer
             else valueFov.ForeColor = Color.FromArgb(0, fov_bar.Value, 0);
 
             if (processOpen) m.WriteMemory(fovBytes, "float", val);
+            
 
             valueFov.Text = val;
         }

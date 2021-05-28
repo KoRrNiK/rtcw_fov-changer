@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net5.0-windows</TargetFramework>
-    <RootNamespace>Return_to_Castle_Wolfenstein_Fov_changer</RootNamespace>
+    <RootNamespace>RtCW - FOV Changer</RootNamespace>
     <UseWindowsForms>true</UseWindowsForms>
     <Platforms>AnyCPU;x64;x86</Platforms>
     <ApplicationIcon>rtcw-icon-fov.ico</ApplicationIcon>
@@ -14,7 +14,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Memory.dll.x64" Version="1.2.21" />
+    <PackageReference Include="Memory.dll.x86" Version="1.2.22" />
   </ItemGroup>
 
 </Project>

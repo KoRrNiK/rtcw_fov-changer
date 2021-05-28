@@ -30,6 +30,7 @@ namespace Return_to_Castle_Wolfenstein_Fov_changer
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.timer3 = new System.Windows.Forms.Timer(this.components);
@@ -171,7 +172,7 @@ namespace Return_to_Castle_Wolfenstein_Fov_changer
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label3.Location = new System.Drawing.Point(5, 99);
+            this.label3.Location = new System.Drawing.Point(-1, 111);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(105, 15);
             this.label3.TabIndex = 2;
@@ -181,7 +182,7 @@ namespace Return_to_Castle_Wolfenstein_Fov_changer
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label4.Location = new System.Drawing.Point(5, 114);
+            this.label4.Location = new System.Drawing.Point(-1, 126);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(82, 15);
             this.label4.TabIndex = 3;
@@ -191,7 +192,7 @@ namespace Return_to_Castle_Wolfenstein_Fov_changer
             // 
             this.processID.AutoSize = true;
             this.processID.ForeColor = System.Drawing.Color.Maroon;
-            this.processID.Location = new System.Drawing.Point(105, 99);
+            this.processID.Location = new System.Drawing.Point(99, 111);
             this.processID.Name = "processID";
             this.processID.Size = new System.Drawing.Size(29, 15);
             this.processID.TabIndex = 4;
@@ -201,7 +202,7 @@ namespace Return_to_Castle_Wolfenstein_Fov_changer
             // 
             this.processOpenLabel.AutoSize = true;
             this.processOpenLabel.ForeColor = System.Drawing.Color.Maroon;
-            this.processOpenLabel.Location = new System.Drawing.Point(81, 114);
+            this.processOpenLabel.Location = new System.Drawing.Point(75, 126);
             this.processOpenLabel.Name = "processOpenLabel";
             this.processOpenLabel.Size = new System.Drawing.Size(29, 15);
             this.processOpenLabel.TabIndex = 5;
@@ -245,7 +246,7 @@ namespace Return_to_Castle_Wolfenstein_Fov_changer
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(84, 11);
             this.label1.TabIndex = 11;
-            this.label1.Text = "Version Program: 1.0.1";
+            this.label1.Text = "Version Program: 1.0.2";
             // 
             // label5
             // 
@@ -277,6 +278,7 @@ namespace Return_to_Castle_Wolfenstein_Fov_changer
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);

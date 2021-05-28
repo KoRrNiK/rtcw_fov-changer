@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Return to Castle Wolfenstein Fov changer", "Return to Castle Wolfenstein Fov changer\Return to Castle Wolfenstein Fov changer.csproj", "{FF8D0DBC-0777-4748-A4BD-A8E0AE95352F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RtCW - FOV Changer", "Return to Castle Wolfenstein Fov changer\RtCW - FOV Changer.csproj", "{FF8D0DBC-0777-4748-A4BD-A8E0AE95352F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
