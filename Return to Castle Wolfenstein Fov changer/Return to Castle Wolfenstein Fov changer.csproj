@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <RootNamespace>Return_to_Castle_Wolfenstein_Fov_changer</RootNamespace>
+    <UseWindowsForms>true</UseWindowsForms>
+    <Platforms>AnyCPU;x64;x86</Platforms>
+    <ApplicationIcon>rtcw-icon-fov.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Memory.dll.x64" Version="1.2.21" />
+  </ItemGroup>
+
+</Project>
