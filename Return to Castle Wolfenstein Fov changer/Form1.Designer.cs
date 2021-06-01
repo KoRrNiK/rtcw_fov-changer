@@ -50,10 +50,12 @@ namespace Return_to_Castle_Wolfenstein_Fov_changer
             this.processID = new System.Windows.Forms.Label();
             this.processOpenLabel = new System.Windows.Forms.Label();
             this.valueFov = new System.Windows.Forms.Label();
-            this.fov_bar = new System.Windows.Forms.TrackBar();
             this.timer8 = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.fov_bar = new System.Windows.Forms.TrackBar();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fov_bar)).BeginInit();
             this.SuspendLayout();
@@ -96,9 +98,10 @@ namespace Return_to_Castle_Wolfenstein_Fov_changer
             this.panel1.Controls.Add(this.tittleProgram);
             this.panel1.Controls.Add(this.up_bar_button1);
             this.panel1.Controls.Add(this.up_bar_button2);
-            this.panel1.Location = new System.Drawing.Point(-1, -2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(445, 35);
+            this.panel1.Size = new System.Drawing.Size(443, 35);
             this.panel1.TabIndex = 0;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
@@ -134,11 +137,12 @@ namespace Return_to_Castle_Wolfenstein_Fov_changer
             // 
             // up_bar_button1
             // 
+            this.up_bar_button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.up_bar_button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(50)))));
             this.up_bar_button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.up_bar_button1.Font = new System.Drawing.Font("Segoe UI", 5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.up_bar_button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.up_bar_button1.Location = new System.Drawing.Point(382, 7);
+            this.up_bar_button1.Location = new System.Drawing.Point(390, 7);
             this.up_bar_button1.Name = "up_bar_button1";
             this.up_bar_button1.Size = new System.Drawing.Size(20, 20);
             this.up_bar_button1.TabIndex = 1;
@@ -148,11 +152,12 @@ namespace Return_to_Castle_Wolfenstein_Fov_changer
             // 
             // up_bar_button2
             // 
+            this.up_bar_button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.up_bar_button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(50)))));
             this.up_bar_button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.up_bar_button2.Font = new System.Drawing.Font("Segoe UI", 5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.up_bar_button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.up_bar_button2.Location = new System.Drawing.Point(408, 7);
+            this.up_bar_button2.Location = new System.Drawing.Point(416, 7);
             this.up_bar_button2.Name = "up_bar_button2";
             this.up_bar_button2.Size = new System.Drawing.Size(20, 20);
             this.up_bar_button2.TabIndex = 0;
@@ -163,65 +168,126 @@ namespace Return_to_Castle_Wolfenstein_Fov_changer
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(40)))));
-            this.panel2.Location = new System.Drawing.Point(-2, 141);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.panel2.Location = new System.Drawing.Point(0, 150);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(445, 16);
+            this.panel2.Size = new System.Drawing.Size(443, 2);
             this.panel2.TabIndex = 1;
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label3.Location = new System.Drawing.Point(-1, 111);
+            this.label3.Location = new System.Drawing.Point(0, 127);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(105, 15);
+            this.label3.Size = new System.Drawing.Size(70, 11);
             this.label3.TabIndex = 2;
             this.label3.Text = "WolfSP Process ID:";
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label4.Location = new System.Drawing.Point(-1, 126);
+            this.label4.Location = new System.Drawing.Point(0, 138);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(82, 15);
+            this.label4.Size = new System.Drawing.Size(55, 11);
             this.label4.TabIndex = 3;
             this.label4.Text = "Process Open:";
             // 
             // processID
             // 
+            this.processID.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.processID.AutoSize = true;
+            this.processID.Font = new System.Drawing.Font("Segoe UI", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.processID.ForeColor = System.Drawing.Color.Maroon;
-            this.processID.Location = new System.Drawing.Point(99, 111);
+            this.processID.Location = new System.Drawing.Point(67, 127);
             this.processID.Name = "processID";
-            this.processID.Size = new System.Drawing.Size(29, 15);
+            this.processID.Size = new System.Drawing.Size(19, 11);
             this.processID.TabIndex = 4;
             this.processID.Text = "N/A";
             // 
             // processOpenLabel
             // 
+            this.processOpenLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.processOpenLabel.AutoSize = true;
+            this.processOpenLabel.Font = new System.Drawing.Font("Segoe UI", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.processOpenLabel.ForeColor = System.Drawing.Color.Maroon;
-            this.processOpenLabel.Location = new System.Drawing.Point(75, 126);
+            this.processOpenLabel.Location = new System.Drawing.Point(51, 138);
             this.processOpenLabel.Name = "processOpenLabel";
-            this.processOpenLabel.Size = new System.Drawing.Size(29, 15);
+            this.processOpenLabel.Size = new System.Drawing.Size(19, 11);
             this.processOpenLabel.TabIndex = 5;
             this.processOpenLabel.Text = "N/A";
             // 
             // valueFov
             // 
             this.valueFov.AutoSize = true;
-            this.valueFov.Location = new System.Drawing.Point(353, 57);
+            this.valueFov.Location = new System.Drawing.Point(353, 73);
             this.valueFov.Name = "valueFov";
             this.valueFov.Size = new System.Drawing.Size(65, 15);
             this.valueFov.TabIndex = 10;
             this.valueFov.Text = "FOV(Value)";
             // 
+            // timer8
+            // 
+            this.timer8.Interval = 500;
+            this.timer8.Tick += new System.EventHandler(this.timer8_Tick);
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.label1.Location = new System.Drawing.Point(358, 137);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(84, 11);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Version Program: 1.0.4";
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.label5.Location = new System.Drawing.Point(358, 127);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(76, 11);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "Version Game: 1.42d";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.label6.Location = new System.Drawing.Point(6, 73);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(86, 15);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "Forward - Back";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label9.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.label9.Location = new System.Drawing.Point(333, 120);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(25, 28);
+            this.label9.TabIndex = 19;
+            this.label9.Text = "⭮";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
+            // 
             // fov_bar
             // 
             this.fov_bar.AutoSize = false;
             this.fov_bar.LargeChange = 0;
-            this.fov_bar.Location = new System.Drawing.Point(103, 54);
+            this.fov_bar.Location = new System.Drawing.Point(103, 68);
             this.fov_bar.Maximum = 130;
             this.fov_bar.Minimum = 60;
             this.fov_bar.Name = "fov_bar";
@@ -232,39 +298,14 @@ namespace Return_to_Castle_Wolfenstein_Fov_changer
             this.fov_bar.Value = 60;
             this.fov_bar.Scroll += new System.EventHandler(this.fov_bar_Scroll);
             // 
-            // timer8
-            // 
-            this.timer8.Interval = 1000;
-            this.timer8.Tick += new System.EventHandler(this.timer8_Tick);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label1.Location = new System.Drawing.Point(358, 128);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 11);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Version Program: 1.0.2";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label5.Location = new System.Drawing.Point(358, 118);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(76, 11);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "Version Game: 1.42d";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(35)))));
-            this.ClientSize = new System.Drawing.Size(443, 155);
+            this.ClientSize = new System.Drawing.Size(443, 152);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.fov_bar);
@@ -280,7 +321,7 @@ namespace Return_to_Castle_Wolfenstein_Fov_changer
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "RtCW - FOV Changer";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Shown += new System.EventHandler(this.Form1_Shown);
             this.panel1.ResumeLayout(false);
@@ -311,10 +352,12 @@ namespace Return_to_Castle_Wolfenstein_Fov_changer
         private System.Windows.Forms.Label processID;
         private System.Windows.Forms.Label processOpenLabel;
         private System.Windows.Forms.Label valueFov;
-        private System.Windows.Forms.TrackBar fov_bar;
         private System.Windows.Forms.Timer timer8;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TrackBar fov_bar;
     }
 }
 

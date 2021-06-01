@@ -46,6 +46,8 @@ namespace Return_to_Castle_Wolfenstein_Fov_changer
             }
         }
 
+
+
         private void Form1_Shown(object sender, EventArgs e)
         {
             m.WriteMemory(fovBytes, "float", "90");
@@ -54,9 +56,16 @@ namespace Return_to_Castle_Wolfenstein_Fov_changer
         private void Form1_Load(object sender, EventArgs e)
         {
 
-            fov_bar.Value = 90;
+            fov_bar.Value = Properties.Settings.Default.forwardback;
+
             valueFov.Text = fov_bar.Value.ToString();
-            valueFov.ForeColor = Color.FromArgb(255,200,0);
+
+
+            if (fov_bar.Value == 90) valueFov.ForeColor = Color.FromArgb(255, 200, 0);
+            else if (fov_bar.Value > 90) valueFov.ForeColor = Color.FromArgb(fov_bar.Value, 0, 0);
+            else valueFov.ForeColor = Color.FromArgb(0, fov_bar.Value, 0);
+
+
 
             tittleProgram.ForeColor = Color.FromArgb(r, g, b);
 
@@ -164,6 +173,7 @@ namespace Return_to_Castle_Wolfenstein_Fov_changer
             if (processOpen){
                 string val = fov_bar.Value.ToString();
                 m.WriteMemory(fovBytes, "float", val);
+
             }
         }
 
@@ -171,9 +181,15 @@ namespace Return_to_Castle_Wolfenstein_Fov_changer
         {
             processOpen = processOpen = m.OpenProcess(nameGame);
             int pID = m.GetProcIdFromName(nameGame);
+            int runProcess = m.ReadByte(nameGame + ".exe+A4021C");
 
             if (processOpen)
             {
+                if (runProcess == 0)
+                {
+                    m.CloseProcess();
+                }
+
                 processOpenLabel.ForeColor = Color.Green;
                 processOpenLabel.Text = "Game Found";
                 processOpenLabel.Font = new Font(processOpenLabel.Font, FontStyle.Bold);
@@ -197,6 +213,12 @@ namespace Return_to_Castle_Wolfenstein_Fov_changer
 
         }
 
+        private void label9_Click(object sender, EventArgs e)
+        {
+            m.WriteMemory(fovBytes, "float", "90");
+            Application.Restart();
+        }
+
         private void fov_bar_Scroll(object sender, EventArgs e)
         {
             string val = fov_bar.Value.ToString();
@@ -206,7 +228,9 @@ namespace Return_to_Castle_Wolfenstein_Fov_changer
             else valueFov.ForeColor = Color.FromArgb(0, fov_bar.Value, 0);
 
             if (processOpen) m.WriteMemory(fovBytes, "float", val);
-            
+
+            Properties.Settings.Default.forwardback = fov_bar.Value;
+            Properties.Settings.Default.Save();
 
             valueFov.Text = val;
         }
